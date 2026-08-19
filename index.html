@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Мой 3D Мир</title>
+    <!-- Подключаем бесплатный 3D движок A-Frame через интернет -->
+    <script src="https://aframe.io"></script>
+  </head>
+  <body>
+    <!-- Все 3D объекты на странице должны находиться внутри тега a-scene -->
+    <a-scene>
+      
+      <!-- 1. Красный 3D-куб -->
+      <!-- position: координаты в пространстве (слева/справа, выше/ниже, дальше/ближе) -->
+      <!-- animation: заставляет куб крутиться (rotation) вокруг своей оси бесконечно (loop: true) -->
+      <a-box position="-1 1.5 -3" rotation="0 45 0" color="#E74C3C"
+             animation="property: rotation; to: 0 405 0; loop: true; dur: 3000">
+      </a-box>
+
+      <!-- 2. Синий 3D-шар (сфера) -->
+      <a-sphere position="1 1.5 -3" radius="0.75" color="#3498DB"></a-sphere>
+
+      <!-- 3. Зеленая земля-платформа, на которой все стоит -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="20" height="20" color="#2ECC71"></a-plane>
+
+      <!-- 4. Цвет неба (задний фон) -->
+      <a-sky color="#F4F6F7"></a-sky>
+
+      <!-- 5. Камера игрока. look-controls позволяет крутить головой, водя пальцем по экрану телефона -->
+      
+      
+    </a-scene>
+  </body>
+</html>
 
